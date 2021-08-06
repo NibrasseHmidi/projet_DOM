@@ -1,0 +1,824 @@
+/***********style index.html***************/
+
+/*section 1 slide*/
+.intro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.left {
+  float: left;
+  height: 100%;
+  width: 60%;
+  padding: 3rem 3rem 3rem 5rem;
+  display: table;
+}
+
+.left div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.left .btn {
+  background: #1448a7;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: #fff;
+  display: block;
+  font-family: "robotothin";
+  font-size: 16px;
+  padding: 15px 0;
+  margin-left: 250px;
+  margin-top: 30px;
+  width: 20%;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+@media screen and (max-width: 375px) {
+  .left .btn {
+    margin-left: 100px;
+
+    width: 30%;
+  }
+}
+.form {
+  padding: 40px 0;
+}
+.form input[type="text"] {
+  width: 300px;
+  box-sizing: border-box;
+  border: 2px solid #1448a7;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("https://www.iconsdb.com/icons/preview/green/active-search-xxl.png");
+  background-size: 25px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 40px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.form input[type="text"]:focus {
+  width: 500px;
+}
+
+.intro h2 {
+  font-size: 40px;
+  margin-bottom: 3rem;
+  color: #1448a7;
+}
+p {
+  color: #000000;
+  font-size: 20px;
+  font-family: "robotolight";
+  margin-bottom: 4rem;
+}
+
+.slider {
+  float: right;
+  position: relative;
+  width: 40%;
+  height: 100%;
+}
+.slider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: clip 0.7s ease-in-out, z-index 0s 0.7s;
+  clip: rect(0, 100vw, 100vh, 100vw);
+  display: table;
+}
+.center-y {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #1448a7;
+  text-shadow: 2px 2px 1px #ddebec;
+}
+
+.center-y h3 {
+  font-size: 55px;
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 0.7s 0s, transform 0.5s 0.2s;
+  transform: translate3d(0, 50%, 0);
+}
+li.current h3 {
+  opacity: 1;
+  transition-delay: 1s;
+  transform: translate3d(0, 0, 0);
+}
+li.current {
+  z-index: 1;
+  clip: rect(0, 100vw, 100vh, 0);
+}
+li.prev {
+  clip: rect(0, 0, 100vh, 0);
+}
+.slider header {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+header a {
+  display: inline-block;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  min-width: 5px;
+  min-height: 5px;
+  background: #fff;
+  margin: 0 1rem;
+  transition: transform 0.3s;
+}
+a.current_dot {
+  transform: scale(1.4);
+}
+@media screen and (max-width: 800px) {
+  .left {
+    width: 100%;
+    height: 30%;
+    padding: 30px;
+  }
+  .slider {
+    width: 100%;
+    height: 70%;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+/********************************************************************************************/
+/*section 2 gallery carousel*/
+.container-all {
+  width: 100%;
+}
+.title-h1 {
+  border-bottom: none;
+  text-align: center;
+  font-size: 50px;
+  color: #1448a7;
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+}
+.container-all p {
+  font-family: "robotothin";
+  text-align: center;
+  color: #1448a7;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.container__price {
+  height: 55px;
+  flex: 0 0 50px;
+  font-size: 40px;
+  font-family: Lobster;
+  font-weight: 50;
+  margin: 80px 0;
+  border-bottom: 1px dashed;
+  color: #1448a7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*****scroll*******/
+.scroll {
+  text-align: center;
+  margin-top: 2.5%;
+}
+
+.scroll-arrow {
+  width: 30px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 25px;
+  transition: 0.2s;
+  border: 2px solid #0ec536;
+  border-radius: 20px;
+}
+
+.scroll ul {
+  width: 90%;
+  scroll-behavior: smooth;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.scroll ul::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-left: 0;
+  margin-right: 0;
+  transition: 0.2s;
+}
+
+.scroll li,
+.scroll img {
+  width: 400px;
+}
+
+.box {
+  overflow: hidden;
+}
+.slide-img {
+  height: 400px;
+  position: relative;
+}
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+.detail-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-family: "robotolight";
+}
+.detail-box a {
+  font-size: 15px;
+  font-weight: 700;
+  padding-left: 0 90px 0 0;
+  color: #1448a7;
+  border: 1px solid #1448a7;
+  padding: 9px;
+}
+/**********************rating stars*************************/
+.rating {
+  width: 100px;
+  height: 15px;
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  display: inline-block;
+  cursor: pointer;
+  width: 20px;
+}
+.rating label:before {
+  content: "\2605";
+  font-size: 25px;
+  position: relative;
+  display: block;
+  color: #101010;
+}
+
+.rating label:hover:before,
+.rating label:hover ~ label:before,
+.rating input:checked ~ label:before {
+  color: yellow;
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(92, 95, b236, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*btn view recette*/
+.view-btn {
+  width: 160px;
+  font-size: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #0ec536;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: cursive;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+.view-btn:hover {
+  color: #1448a7;
+  background-color: #0ec536;
+  transition: all ease 0.3s;
+}
+
+.overlay {
+  visibility: hidden;
+}
+
+.slide-img:hover .overlay {
+  visibility: visible;
+  animation: fade 0.5s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 800px) {
+  .scroll ul {
+    width: 80%;
+  }
+  .scroll li,
+  .scroll img {
+    width: 500px;
+    overflow: hidden;
+  }
+  .scroll li {
+    width: 100%;
+    overflow: hidden;
+  }
+  .slide-img {
+    height: 400px;
+    position: relative;
+  }
+  .slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+  .container-all {
+    width: 50%;
+  }
+  .title-h1 {
+    border-bottom: none;
+    text-align: center;
+    font-size: 50px;
+    color: #1448a7;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+  }
+  .container-all p {
+    font-family: "robotothin";
+    text-align: center;
+    color: #1448a7;
+    font-size: 20px;
+    margin-top: 0;
+  }
+}
+/******************************************************************************************/
+/*filter*/
+.filter {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+.filter h1 {
+  height: 55px;
+  flex: 0 0 50px;
+  font-size: 40px;
+  margin: 80px 0;
+  border-bottom: 1px dashed;
+  color: #1448a7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myBtnContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 400px;
+}
+.myBtnContainer .Btn {
+  padding: 7px 50px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0ec536;
+  border: 1px solid #1448a7;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.myBtnContainer .Btn:hover {
+  color: #1448a7;
+  background-color: #0ec5368a;
+}
+.grid-wrap {
+  line-height: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  margin: 50px;
+}
+.grid-wrap .item {
+  overflow: hidden;
+  display: none;
+  transform: scale(0.2, 0.2);
+}
+
+@keyframes enter {
+  0% {
+    transform: scale(0.2, 0.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.grid-wrap .item .tools {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0ab2;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.grid-wrap .item .tools p {
+  color: #34a042;
+  font-family: Lobster;
+  font-size: 25px;
+  transition: 0.3s;
+  text-shadow: 2px 2px 1px #8fe6f1;
+}
+.grid-wrap .item .tools span {
+  color: rgb(255, 255, 255);
+
+  font-size: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.grid-wrap img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.grid-wrap .item:hover .tools {
+  visibility: visible;
+  opacity: 1;
+}
+.grid-wrap .item:hover .tools span {
+  padding: 6px 16px;
+}
+.grid-wrap .item:hover .tools a {
+  padding: 18px 16px;
+}
+.grid-wrap .show {
+  display: block;
+  animation: enter 0.3s forwards;
+}
+
+@media screen and (max-width: 700px) {
+  .myBtnContainer {
+    padding: 20px 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .myBtnContainer {
+    justify-content: space-between;
+    padding: 20px 100px;
+    width: 250px;
+  }
+  .myBtnContainer .Btn {
+    padding: 10px;
+  }
+  .filter h1 {
+    font-size: 30px;
+  }
+  .container__price {
+    font-size: 30px;
+  }
+  .scroll ul {
+    width: 350px;
+  }
+}
+/***********************************************************************/
+/* contact*/
+.formulair {
+  height: 800px;
+  font-family: "robotolight";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  gap: 5px;
+}
+iframe {
+  width: 500px;
+  height: 450px;
+  border: 1px solid #2ecc77;
+  margin-right: 150px;
+}
+.contact_titre {
+  margin: 50px 0;
+  border-bottom: 1px dashed;
+  padding-bottom: 1em;
+  text-align: center;
+}
+.container_form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+  overflow: hidden;
+  width: 400px;
+
+  max-width: 100%;
+}
+
+.header {
+  background: linear-gradient(to bottom, #67b26f, #4ca2cd);
+  padding: 15px;
+}
+
+.header h2 {
+  color: #222;
+  font-family: "robotothin";
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.forme {
+  padding: 10px;
+}
+
+.form-control {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.form-control input,
+textarea {
+  width: 100%;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  display: block;
+  font-family: "robotothin";
+  font-size: 14px;
+  padding: 10px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #1448a7;
+}
+
+.form-control.success input {
+  border-color: #2ecc77;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control textarea:focus {
+  outline: 0;
+  border-color: #1448a7;
+}
+
+.form-control.success textarea {
+  border-color: #2ecc77;
+}
+
+.form-control.error textarea {
+  border-color: #e74c3c;
+}
+
+.form-control i {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc77;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  color: #2ecc77;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  font-size: 15px;
+}
+
+.form-control.error small {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.forme .btn {
+  background: linear-gradient(to bottom, #67b26f, #4ca2cd);
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: #fff;
+  display: block;
+  font-family: "robotothin";
+  font-size: 16px;
+  padding: 15px 0;
+  margin-top: 20px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 1s ease;
+}
+
+.forme .btn:hover {
+  background: linear-gradient(to bottom, #67b26f, #4ca2cd);
+}
+
+@media (max-width: 700px) {
+  .formulair {
+    flex-direction: column;
+    height: auto;
+  }
+  iframe {
+    width: 500px;
+    height: 400px;
+    margin-bottom: 10px;
+  }
+  .container_form {
+    width: 400px;
+
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+/***************popup index*************************/
+.pop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.popUp {
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  height: 400px;
+  width: 550px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-image: url(../images/n.jpg);
+  z-index: 200;
+}
+@media screen and (max-width: 768px) {
+  .popUp {
+    left: 20%;
+    width: 500px;
+  }
+
+  .content.animated.fadeInLeft h1 {
+    margin: 90px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .popUp {
+    left: 0;
+    width: 400px;
+  }
+
+  .content.animated.fadeInLeft h1 {
+    margin: 85px;
+  }
+}
+.content {
+  animation-delay: 0.3s;
+  position: absolute;
+
+  z-index: 200;
+}
+
+.popUp h1 {
+  color: black;
+  font-size: 30px;
+  font-family: "Pacifico", cursive;
+
+  margin-left: 400px;
+}
+
+.button {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 55px;
+}
+
+.button a {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 3px solid #d8c12e;
+  font-weight: bold;
+}
+
+.button a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 0%;
+  background: #113871;
+  height: 100%;
+  z-index: -1;
+  transition: width 0.3s ease-in-out;
+  transform: skew(-25deg);
+  transform-origin: right;
+}
+
+.button a:hover:after {
+  width: 150%;
+  left: -10px;
+  transform-origin: left;
+}
+
+.button a:hover {
+  color: #d8c12e;
+  transition: all 0.5s ease;
+}
+
+.button a:nth-of-type(1) {
+  border-radius: 50px 0 0 50px;
+  border-right: none;
+}
+
+.button a:nth-of-type(2) {
+  border-radius: 0px 50px 50px 0;
+}
+
+.popUp {
+  display: none;
+}
+
+.pop {
+  display: none;
+}

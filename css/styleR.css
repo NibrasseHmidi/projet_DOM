@@ -1,0 +1,234 @@
+/***********style recette1,2,3,4,5.html**************/
+
+.recettes {
+  width: 700px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 0 50px;
+  box-shadow: 0 20px 20px 0 rgb(0 0 0 / 50%);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.recette__price {
+  width: 600px;
+  background-color: #67b26f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 5px 5px rgb(0 0 0 / 25%);
+}
+.recette__price:hover {
+  background: linear-gradient(to bottom, #2ecc77, #1448a7);
+}
+.recette__details {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: auto;
+}
+.recette__detail {
+  font-size: 15px;
+  color: #111311;
+
+  text-transform: uppercase;
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  display: flex;
+
+  align-items: center;
+}
+.emoji {
+  font-size: 20px;
+  margin-right: 3px;
+}
+.like {
+  font-size: 25px;
+  margin-right: 10px;
+  color: #fff;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 600px;
+}
+.details h2 {
+  text-align: center;
+  color: #1448a7;
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+.details span {
+  margin-top: 5px;
+  color: #000;
+  font-size: 20px;
+  font-family: Lobster;
+  font-style: italic;
+}
+.details p {
+  color: #000;
+  font-size: 20px;
+  font-family: "robotolight";
+
+  font-style: italic;
+}
+h3 {
+  color: #1448a7;
+  font-size: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+p {
+  color: white;
+}
+ol li {
+  color: #000;
+  font-size: 15px;
+  font-family: "robotolight";
+  padding: 5px;
+}
+h1 {
+  font-size: 18px;
+  font-family: Lobster;
+}
+.ingredients {
+  background: #001a33;
+  width: 600px;
+  font-family: "robotolight";
+  list-style-position: inside;
+  padding: 20px;
+  color: #e5e5e5;
+  border: 2px solid #0ec536;
+  border-radius: 20px;
+  list-style-type: circle;
+}
+
+.recettes img {
+  border-radius: 10px;
+  padding: 4px;
+  width: 600px;
+  height: 450px;
+}
+
+.btn {
+  background: linear-gradient(to bottom, #67b26f, #4ca2cd);
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: "robotothin";
+  font-size: 16px;
+  padding: 15px 0;
+  margin-top: 20px;
+  margin-left: 150px;
+  width: 50%;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 1s ease;
+}
+/*respencive recette*/
+@media screen and (max-width: 695px) {
+  .recettes {
+    width: 365px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recette__price {
+    width: 300px;
+    justify-content: center;
+  }
+
+  .recette__details {
+    justify-content: space-between;
+  }
+  .recette__detail {
+    font-size: 5px;
+    margin: 0;
+  }
+  .emoji {
+    font-size: 20px;
+    margin: 0;
+  }
+  .like {
+    font-size: 25px;
+    margin-top: -15px;
+    margin-left: 20px;
+    color: #fff;
+  }
+  .details {
+    padding: 20px;
+    width: 370px;
+  }
+  .details h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .details span {
+    font-size: 18px;
+  }
+  .details p {
+    font-size: 18px;
+    padding: 10px;
+  }
+  h3 {
+    padding: 0 80px;
+  }
+
+  ol li {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 18px;
+    font-family: Lobster;
+  }
+  .ingredients {
+    width: 300px;
+    margin: 30px;
+  }
+
+  .recettes img {
+    padding: 20px;
+
+    width: 350px;
+  }
+
+  .btn {
+    padding: 10px 0;
+    margin: 30px 80px;
+  }
+  #commentaire {
+    width: 350px;
+  }
+}
